@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Personal Website</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Welcome to My Personal Website</h1>
+        <p>Explore my favorite music tracks and add your own!</p>
+    </header>
+
+    <main>
+        <section id="favorites">
+            <h2>My Favorite Tracks</h2>
+            <ul id="music-list">
+                <!-- Music tracks will be dynamically added here -->
+            </ul>
+            <button id="clear-list">Clear Favorites</button>
+        </section>
+
+        <section id="add-music">
+            <h2>Add a New Favorite Track</h2>
+            <form id="music-form">
+                <input type="text" id="track-name" placeholder="Track Name" required>
+                <input type="text" id="artist-name" placeholder="Artist Name" required>
+                <input type="url" id="track-link" placeholder="Spotify/YouTube Link" required>
+                <button type="submit">Add to Favorites</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 My Personal Website</p>
+    </footer>
+</body>
+</html>
