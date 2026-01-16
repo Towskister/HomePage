@@ -11,14 +11,13 @@
     }
 
     body {
-      background: red;
+      background: #ff6b6b; /* light red */
       color: white;
       font-family: Arial, Helvetica, sans-serif;
       display: flex;
       flex-direction: column;
     }
 
-    /* Center display text */
     #display {
       flex: 1;
       display: flex;
@@ -31,7 +30,6 @@
       word-break: break-word;
     }
 
-    /* Bottom input area */
     #input-container {
       padding: 1.5rem;
       display: flex;
@@ -39,9 +37,8 @@
     }
 
     textarea {
-      width: 60%;
-      min-height: 3rem;
-      max-width: 900px;
+      min-width: 12ch;
+      max-width: 90vw;
       resize: none;
       font-size: 1.5rem;
       padding: 0.75rem 1rem;
@@ -49,6 +46,18 @@
       border: none;
       outline: none;
       box-sizing: border-box;
+      overflow: hidden;
+      white-space: nowrap;
+    }
+
+    /* hidden mirror for width calculation */
+    #mirror {
+      position: absolute;
+      visibility: hidden;
+      white-space: pre;
+      font-size: 1.5rem;
+      padding: 0.75rem 1rem;
+      font-family: Arial, Helvetica, sans-serif;
     }
   </style>
 </head>
@@ -60,23 +69,31 @@
     <textarea id="editor" rows="1">Call back</textarea>
   </div>
 
+  <div id="mirror"></div>
+
   <script>
     const textarea = document.getElementById("editor");
     const display = document.getElementById("display");
+    const mirror = document.getElementById("mirror");
 
     function sync() {
       display.textContent = textarea.value || "";
-      autoResize();
+      autoResizeHeight();
+      autoResizeWidth();
     }
 
-    function autoResize() {
+    function autoResizeHeight() {
       textarea.style.height = "auto";
       textarea.style.height = textarea.scrollHeight + "px";
     }
 
+    function autoResizeWidth() {
+      mirror.textContent = textarea.value || " ";
+      textarea.style.width = mirror.offsetWidth + "px";
+    }
+
     textarea.addEventListener("input", sync);
 
-    // Initial sizing
     sync();
   </script>
 
