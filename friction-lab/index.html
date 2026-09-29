@@ -1,0 +1,253 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Workflow Bottleneck Simulator | Friction Lab by Alexis Gutowski</title>
+  <meta name="description" content="Try Friction Lab, a free workflow simulator by Alexis Gutowski. Model queues, find bottlenecks, and compare process improvements in your browser.">
+  <meta name="author" content="Alexis Gutowski">
+  <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
+  <meta name="theme-color" content="#07111f">
+  <link rel="canonical" href="https://alexisgutowski.com/friction-lab/">
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="../assets/apple-touch-icon.png">
+  <link rel="manifest" href="../site.webmanifest">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Alexis Gutowski">
+  <meta property="og:title" content="Friction Lab | Interactive Workflow Bottleneck Simulator">
+  <meta property="og:description" content="Model a workflow, watch it break, diagnose the bottleneck, and compare an optimized system.">
+  <meta property="og:url" content="https://alexisgutowski.com/friction-lab/">
+  <meta property="og:image" content="https://alexisgutowski.com/assets/alexis-gutowski-social-card.jpg">
+  <meta property="og:image:secure_url" content="https://alexisgutowski.com/assets/alexis-gutowski-social-card.jpg">
+  <meta property="og:image:type" content="image/jpeg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Alexis Gutowski, software developer and systems problem solver">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Friction Lab | Interactive Workflow Simulator">
+  <meta name="twitter:description" content="Find bottlenecks and compare workflow improvements in a real browser-based simulation.">
+  <meta name="twitter:image" content="https://alexisgutowski.com/assets/alexis-gutowski-social-card.jpg">
+  <meta name="twitter:image:alt" content="Alexis Gutowski, software developer and systems problem solver">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "@id": "https://alexisgutowski.com/friction-lab/#software",
+    "name": "Friction Lab",
+    "url": "https://alexisgutowski.com/friction-lab/",
+    "description": "An interactive workflow simulator that models queues, processing capacity, rework, labor cost, and bottlenecks before comparing process improvements.",
+    "applicationCategory": "BusinessApplication",
+    "applicationSubCategory": "Workflow simulation and process analysis",
+    "operatingSystem": "Any",
+    "browserRequirements": "Requires a modern browser with JavaScript enabled",
+    "isAccessibleForFree": true,
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    },
+    "author": {
+      "@type": "Person",
+      "@id": "https://alexisgutowski.com/#alexis",
+      "name": "Alexis Gutowski",
+      "url": "https://alexisgutowski.com/"
+    },
+    "image": "https://alexisgutowski.com/assets/alexis-gutowski-social-card.jpg",
+    "featureList": [
+      "Discrete-event workflow simulation",
+      "Bottleneck diagnosis",
+      "Before-and-after optimization comparison",
+      "Editable processing time, capacity, errors, and volume",
+      "Accessible workflow metrics table"
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://alexisgutowski.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Friction Lab", "item": "https://alexisgutowski.com/friction-lab/" }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is a workflow bottleneck?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A bottleneck is the step whose limited capacity, processing time, errors, or handoffs constrain the performance of the larger system."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Are the projected savings guaranteed?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. Friction Lab is an educational modeling tool. Its results show how the entered assumptions behave and help identify questions worth investigating in a real process."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does this tool upload business information?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. The simulation runs locally in the visitor's browser. A shared link contains only the selected scenario and daily volume."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Who built Friction Lab?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Friction Lab was designed and developed by Alexis Gutowski, a software developer and systems problem solver based in Cape Coral, Florida."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <link rel="stylesheet" href="lab.css">
+  <script src="scenarios.js" defer></script>
+  <script src="engine.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#simulator">Skip to simulator</a>
+
+  <header class="lab-header">
+    <nav class="lab-shell nav" aria-label="Primary navigation">
+      <a class="brand" href="../" aria-label="Alexis Gutowski, home"><span class="brand-mark" aria-hidden="true">AG</span><span>Alexis Gutowski</span></a>
+      <div class="nav-actions"><a href="../#work">Work</a><a href="../#contact">Start a project</a></div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="lab-hero lab-shell">
+      <div>
+        <p class="eyebrow">Interactive systems experiment</p>
+        <h1>See where work <em>gets stuck.</em></h1>
+        <p class="hero-copy">Friction Lab is a real discrete-event simulation. Change the workload, inspect each step, diagnose the bottleneck, and compare what happens when the system is redesigned.</p>
+      </div>
+      <div class="hero-badge" aria-label="Simulation characteristics"><span>LIVE MODEL</span><strong>Queues · capacity · rework · cost</strong><small>No information leaves your browser.</small></div>
+    </section>
+
+    <section class="simulator lab-shell" id="simulator" aria-labelledby="simulator-title">
+      <noscript><p class="noscript-note">Friction Lab requires JavaScript to run its simulation. The portfolio and project explanation remain available, but the controls below will not update.</p></noscript>
+      <div class="control-bar">
+        <div class="control-group">
+          <label for="scenarioSelect">Scenario</label>
+          <select id="scenarioSelect"></select>
+        </div>
+        <div class="control-group volume-control">
+          <label for="volumeRange">Daily volume <output id="volumeOutput" for="volumeRange">44</output></label>
+          <input id="volumeRange" type="range" min="5" max="90" value="44" step="1">
+        </div>
+        <div class="button-cluster">
+          <button class="button button-secondary" id="resetButton" type="button">Reset</button>
+          <button class="button button-primary" id="diagnoseButton" type="button">Run diagnosis</button>
+        </div>
+      </div>
+
+      <p class="scenario-description" id="scenarioDescription"></p>
+
+      <div class="kpi-grid" aria-label="Simulation results">
+        <article><span>Average completion</span><strong id="cycleKpi">—</strong><small>working hours</small></article>
+        <article><span>Average waiting</span><strong id="waitKpi">—</strong><small>per processing step</small></article>
+        <article><span>Month-end backlog</span><strong id="backlogKpi">—</strong><small>unfinished items</small></article>
+        <article><span>Modeled labor cost</span><strong id="costKpi">—</strong><small>for monthly arrivals</small></article>
+      </div>
+
+      <div class="workspace-grid">
+        <section class="canvas-panel" aria-labelledby="simulator-title">
+          <div class="panel-heading"><div><p class="eyebrow">Workflow map</p><h2 id="simulator-title">Live system</h2></div><button id="motionButton" class="icon-button" type="button" aria-pressed="false">Pause motion</button></div>
+          <div class="svg-wrap"><svg id="workflowSvg" viewBox="0 0 1000 390" role="img" aria-label="Animated workflow diagram"></svg></div>
+          <div class="legend" aria-label="Workflow legend"><span><i class="legend-normal"></i>Healthy</span><span><i class="legend-warning"></i>Building queue</span><span><i class="legend-problem"></i>Bottleneck</span><span><i class="legend-automated"></i>Optimized</span></div>
+        </section>
+
+        <aside class="inspector" aria-labelledby="inspectorTitle">
+          <p class="eyebrow">Selected step</p>
+          <h2 id="inspectorTitle">Choose a node</h2>
+          <p class="inspector-help" id="inspectorHelp">Select any workflow step to inspect and change it.</p>
+          <form id="nodeForm" hidden>
+            <label for="nodeLabel">Step name</label>
+            <input id="nodeLabel" type="text" maxlength="28">
+
+            <label for="nodeTime">Minutes per item <output id="nodeTimeOutput"></output></label>
+            <input id="nodeTime" type="range" min="1" max="90" step="1">
+
+            <label for="nodeCapacity">Parallel capacity <output id="nodeCapacityOutput"></output></label>
+            <input id="nodeCapacity" type="range" min="1" max="10" step="1">
+
+            <label for="nodeError">Error/rework rate <output id="nodeErrorOutput"></output></label>
+            <input id="nodeError" type="range" min="0" max="25" step="1">
+          </form>
+          <div class="node-stats" id="nodeStats" hidden></div>
+        </aside>
+      </div>
+
+      <section class="diagnosis-panel" aria-labelledby="diagnosisTitle">
+        <div class="diagnosis-copy">
+          <p class="eyebrow">System diagnosis</p>
+          <h2 id="diagnosisTitle">The model is ready.</h2>
+          <p id="diagnosisReason">Run the diagnosis to identify the step creating the most operational friction.</p>
+          <p id="diagnosisRecommendation"></p>
+        </div>
+        <div class="diagnosis-action">
+          <button class="button button-optimize" id="optimizeButton" type="button" disabled>Optimize system</button>
+          <button class="text-button" id="shareButton" type="button">Copy shareable link</button>
+          <span id="shareStatus" role="status" aria-live="polite"></span>
+        </div>
+      </section>
+
+      <section class="comparison" id="comparison" hidden aria-labelledby="comparisonTitle">
+        <div class="comparison-heading"><p class="eyebrow">Before and after</p><h2 id="comparisonTitle">What changed</h2><p>These are modeled estimates based on the controls above, not a guarantee of real-world savings.</p></div>
+        <ul class="change-list" id="changeList"></ul>
+        <div class="comparison-table-wrap">
+          <table>
+            <thead><tr><th>Metric</th><th>Current</th><th>Optimized</th><th>Difference</th></tr></thead>
+            <tbody id="comparisonBody"></tbody>
+          </table>
+        </div>
+      </section>
+
+      <details class="accessible-results">
+        <summary>View detailed workflow metrics</summary>
+        <div class="table-wrap"><table><thead><tr><th>Step</th><th>Utilization</th><th>Average wait</th><th>Errors</th><th>Peak queue</th><th>Month-end backlog</th></tr></thead><tbody id="metricsBody"></tbody></table></div>
+      </details>
+      <p class="sr-status" id="simulationStatus" role="status" aria-live="polite"></p>
+    </section>
+
+    <article class="explainer lab-shell">
+      <header><p class="eyebrow">Under the hood</p><h2>This is a simulation, not a prerecorded animation.</h2></header>
+      <div class="explainer-grid">
+        <section><span>01</span><h3>Work arrives</h3><p>The model generates a month of incoming work using a reproducible seeded sequence.</p></section>
+        <section><span>02</span><h3>Queues form</h3><p>Every step has limited capacity, processing time, labor cost, and a chance of rework.</p></section>
+        <section><span>03</span><h3>Friction is measured</h3><p>The diagnostic engine compares utilization, waiting, backlog, and errors rather than guessing.</p></section>
+        <section><span>04</span><h3>Changes are tested</h3><p>The optimized model is simulated again under the same workload for a fair comparison.</p></section>
+      </div>
+
+      <section class="faq" aria-labelledby="faqTitle">
+        <p class="eyebrow">Questions</p><h2 id="faqTitle">About Friction Lab</h2>
+        <details><summary>What is a workflow bottleneck?</summary><p>A bottleneck is the step whose limited capacity, processing time, errors, or handoffs constrain the performance of the larger system.</p></details>
+        <details><summary>Are the projected savings guaranteed?</summary><p>No. Friction Lab is an educational modeling tool. Its results show how the entered assumptions behave and help identify questions worth investigating in a real process.</p></details>
+        <details><summary>Does this tool upload business information?</summary><p>No. The simulation runs locally in your browser. A shared link contains only the selected scenario and daily volume unless you manually provide additional information elsewhere.</p></details>
+        <details><summary>Who built Friction Lab?</summary><p>Friction Lab was designed and developed by Alexis Gutowski, a software developer and systems problem solver based in Cape Coral, Florida.</p></details>
+      </section>
+    </article>
+  </main>
+
+  <footer class="lab-footer"><div class="lab-shell"><p>Built by <a href="../">Alexis Gutowski</a></p><p>Need a real workflow untangled? <a href="mailto:hello@alexisgutowski.com">hello@alexisgutowski.com</a></p></div></footer>
+</body>
+</html>

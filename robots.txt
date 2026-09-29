@@ -1,0 +1,16 @@
+User-agent: *
+Allow: /
+
+# OpenAI's search crawler. This controls inclusion in ChatGPT search results.
+User-agent: OAI-SearchBot
+Allow: /
+
+# OpenAI's model-training crawler. This can be changed independently of search.
+User-agent: GPTBot
+Allow: /
+
+# Requests made when a user explicitly asks ChatGPT to visit a page.
+User-agent: ChatGPT-User
+Allow: /
+
+Sitemap: https://alexisgutowski.com/sitemap.xml

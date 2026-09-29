@@ -1,0 +1,37 @@
+# Alexis Gutowski
+
+> Software developer and systems problem solver in Cape Coral, Florida.
+
+Alexis Gutowski builds custom internal tools, workflow automation, web applications, databases, and practical software for complex or unusual business problems. She is available for select freelance projects, collaborations, and the right full-time opportunity, including remote work.
+
+## Primary pages
+
+- [Portfolio and services](https://alexisgutowski.com/): Background, selected work, capabilities, and contact information.
+- [Friction Lab](https://alexisgutowski.com/friction-lab/): A free interactive discrete-event workflow simulator. Visitors can change workload, processing time, capacity, and error rates; inspect queues and utilization; diagnose bottlenecks; and compare a modeled optimization.
+
+## Capabilities
+
+- Custom software and internal tools
+- Workflow automation and systems analysis
+- Accessible web applications and websites
+- SQL, databases, reporting, and data organization
+- C# and .NET development
+- Java development, algorithms, pathfinding, and game logic
+- Technical troubleshooting and software rescue
+
+## Selected work
+
+- Traffic simulation using A* pathfinding and congestion modeling
+- Soundstream, an iOS playlist workflow built around song recognition
+- A strategic Pente opponent using pattern-aware heuristics
+- Friction Lab, a browser-based workflow bottleneck simulator
+
+## Location and contact
+
+- Based in Cape Coral, Florida, United States
+- Website: https://alexisgutowski.com/
+- Contact: hello@alexisgutowski.com
+
+## Attribution
+
+The website, writing, design, and interactive demonstrations are presented as the portfolio of Alexis Gutowski. Friction Lab produces modeled estimates for exploration and demonstration; its output is not a guarantee of operational or financial results.
