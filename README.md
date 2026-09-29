@@ -1,6 +1,6 @@
 # AlexisGutowski.com deployment package
 
-This is a complete, build-free static website for `https://alexisgutowski.com/`. It includes the portfolio homepage, the full Friction Lab simulation, responsive styling, share artwork, favicon assets, structured data, crawler controls, a sitemap, and a custom 404 page.
+This is a complete, build-free static website for `https://alexisgutowski.com/`. It includes the portfolio homepage, a recruiter-friendly web resume, the full Friction Lab simulation, responsive styling, share artwork, favicon assets, structured data, crawler controls, a sitemap, and a custom 404 page.
 
 No package manager, database, API key, or server-side runtime is required. Upload the files and the site runs in the browser.
 
@@ -21,10 +21,15 @@ alexisgutowski-site/
 ├── DEPLOY-CHECKLIST.md          Short go-live checklist
 ├── assets/
 │   ├── alexis-gutowski-headshot.jpg
+│   ├── alexis-gutowski-resume.pdf   Public-contact resume download
 │   ├── alexis-gutowski-social-card.jpg
 │   ├── apple-touch-icon.png
 │   ├── icon-192.png
 │   └── icon-512.png
+├── resume/
+│   ├── index.html               Searchable, print-ready professional resume
+│   ├── resume.css               Resume screen and print styling
+│   └── resume.js                Print / save PDF control
 └── friction-lab/
     ├── index.html                Full simulator page
     ├── lab.css                   Simulator styles
@@ -38,7 +43,7 @@ alexisgutowski-site/
 1. Back up the files currently serving `alexisgutowski.com`.
 2. Unzip the package on your computer.
 3. Open the `alexisgutowski-site` folder and upload **its contents** to the domain's document root. Depending on the host, that directory may be named `public_html`, `www`, or the domain name.
-4. Preserve the included folder structure, especially `assets/` and `friction-lab/`.
+4. Preserve the included folder structure, especially `assets/`, `resume/`, and `friction-lab/`.
 5. Allow overwriting of the existing `index.html`, `styles.css`, and `script.js` after the backup is complete.
 6. Purge any host or CDN cache.
 7. Open the verification URLs listed below.
@@ -48,6 +53,8 @@ If the host uses a file manager, upload the ZIP to the document root, extract it
 ### Verify after upload
 
 - `https://alexisgutowski.com/`
+- `https://alexisgutowski.com/resume/`
+- `https://alexisgutowski.com/assets/alexis-gutowski-resume.pdf`
 - `https://alexisgutowski.com/friction-lab/`
 - `https://alexisgutowski.com/assets/alexis-gutowski-social-card.jpg`
 - `https://alexisgutowski.com/robots.txt`
@@ -72,6 +79,8 @@ Confirm that this mailbox or forwarder exists. If it does not, replace that addr
 - `index.html`
 - `llms.txt`
 - `friction-lab/index.html`
+- `resume/index.html`
+- `assets/alexis-gutowski-resume.pdf` (regenerate this file if the public contact address changes)
 
 ### Public profiles
 
@@ -93,6 +102,7 @@ Only add profiles that belong to Alexis and are intended to be public.
 - Canonical URLs using the `.com` domain
 - Crawlable, semantic HTML with descriptive headings and visible service/location copy
 - Person, WebSite, SoftwareApplication, and Breadcrumb structured data
+- A dedicated ProfilePage entity for the resume, tied to the same Person identity used across the site
 - Open Graph and X/Twitter large-image metadata
 - A 1200 × 630 social card based on the supplied headshot
 - Descriptive image alternative text and explicit image dimensions
@@ -121,7 +131,7 @@ To keep ChatGPT search discovery enabled while opting out of model-training craw
 1. Open [Google Search Console](https://search.google.com/search-console/) and add `alexisgutowski.com` as a Domain property.
 2. Complete the DNS verification supplied by Google. Do not paste a made-up verification token into the HTML.
 3. Submit `https://alexisgutowski.com/sitemap.xml` under **Sitemaps**.
-4. Inspect the homepage and Friction Lab URLs and request indexing after deployment.
+4. Inspect the homepage, resume, and Friction Lab URLs and request indexing after deployment.
 5. Watch **Pages**, **Core Web Vitals**, and **Enhancements** for crawl or structured-data issues.
 
 ### Bing Webmaster Tools
@@ -134,7 +144,7 @@ To keep ChatGPT search discovery enabled while opting out of model-training craw
 
 ### Structured-data check
 
-After deployment, test both URLs with [Google's Rich Results Test](https://search.google.com/test/rich-results) and [Schema.org's validator](https://validator.schema.org/). The markup is valid JSON-LD, but the live check confirms that hosting, edits, and caching did not change it.
+After deployment, test all three public pages with [Google's Rich Results Test](https://search.google.com/test/rich-results) and [Schema.org's validator](https://validator.schema.org/). The markup is valid JSON-LD, but the live check confirms that hosting, edits, and caching did not change it.
 
 ## Refresh social link previews
 
@@ -160,6 +170,7 @@ Then open:
 
 ```text
 http://localhost:8080/
+http://localhost:8080/resume/
 http://localhost:8080/friction-lab/
 ```
 

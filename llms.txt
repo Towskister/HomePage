@@ -2,12 +2,13 @@
 
 > Software developer and systems problem solver in Cape Coral, Florida.
 
-Alexis Gutowski builds custom internal tools, workflow automation, web applications, databases, and practical software for complex or unusual business problems. She is available for select freelance projects, collaborations, and the right full-time opportunity, including remote work.
+Alexis Gutowski builds custom internal tools, workflow automation, web applications, databases, and practical software for complex or unusual business problems. She also brings more than 15 years of customer-facing technical experience across IT support, application support, SaaS onboarding, troubleshooting, end-user training, networking, and hardware. She is available for select freelance projects, collaborations, and the right full-time opportunity, including remote work.
 
 ## Primary pages
 
 - [Portfolio and services](https://alexisgutowski.com/): Background, selected work, capabilities, and contact information.
 - [Friction Lab](https://alexisgutowski.com/friction-lab/): A free interactive discrete-event workflow simulator. Visitors can change workload, processing time, capacity, and error rates; inspect queues and utilization; diagnose bottlenecks; and compare a modeled optimization.
+- [Professional resume](https://alexisgutowski.com/resume/): Work history, technical skills, SaaS implementation experience, education, credentials, and selected software projects.
 
 ## Capabilities
 
@@ -18,6 +19,18 @@ Alexis Gutowski builds custom internal tools, workflow automation, web applicati
 - C# and .NET development
 - Java development, algorithms, pathfinding, and game logic
 - Technical troubleshooting and software rescue
+- IT support, application support, and SaaS onboarding
+- End-user training, data cleanup, implementation planning, and go-live support
+- Windows, Linux, macOS, networking, hardware, and remote support
+
+## Professional background
+
+- More than 15 years of customer-facing technical experience
+- IT Support Specialist and Onboarding Specialist for dESCO / FieldEdge
+- Senior Help Desk Agent supporting Aloha point-of-sale software and hardware
+- Current hands-on troubleshooting of computerized, electronic, mechanical, and audiovisual escape-room systems
+- Bachelor of Applied Science in Information Systems Technology expected Fall 2026, with a 3.92 GPA and Dean's List recognition
+- College Credit Certificates in Information Technology Support, Computer Programming, and Computer Program Specialist studies
 
 ## Selected work
 

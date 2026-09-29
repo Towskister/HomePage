@@ -9,7 +9,7 @@
 ## Upload
 
 - [ ] Upload the **contents** of `alexisgutowski-site` to the domain's document root.
-- [ ] Preserve the `assets` and `friction-lab` folders.
+- [ ] Preserve the `assets`, `resume`, and `friction-lab` folders.
 - [ ] Replace the existing homepage files only after the backup is safe.
 - [ ] Purge the host/CDN cache.
 
@@ -18,6 +18,7 @@
 - [ ] Homepage loads at `https://alexisgutowski.com/`.
 - [ ] Mobile navigation opens, closes, and follows links.
 - [ ] Homepage workload slider and diagnosis button respond.
+- [ ] Resume loads at `https://alexisgutowski.com/resume/`, its PDF downloads, and the print button opens the browser print dialog.
 - [ ] Friction Lab loads at `https://alexisgutowski.com/friction-lab/`.
 - [ ] Scenario changes, sliders, node editing, diagnosis, optimization, and share-link copying work.
 - [ ] Headshot and social card URLs load directly.
@@ -30,7 +31,7 @@
 - [ ] `robots.txt`, `sitemap.xml`, and `llms.txt` load publicly.
 - [ ] Verify the domain in Google Search Console.
 - [ ] Submit `https://alexisgutowski.com/sitemap.xml`.
-- [ ] Request indexing for `/` and `/friction-lab/`.
+- [ ] Request indexing for `/`, `/resume/`, and `/friction-lab/`.
 - [ ] Import or verify the site in Bing Webmaster Tools and submit the sitemap.
 - [ ] Test both pages in Google's Rich Results Test.
 - [ ] Refresh the homepage preview in the Facebook Sharing Debugger.
